@@ -27,7 +27,7 @@ Use o teclado para interagir com o ambiente:
 
 | Ação | Tecla |
 | :--- | :--- |
-| Mover | `W`, `A`, `S`, `D` ou Setas |
+| Mover | Setas |
 | Atacar | `Espaço` ou `J` |
 | Interagir | `E` |
 
