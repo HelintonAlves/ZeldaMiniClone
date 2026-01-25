@@ -3,7 +3,7 @@
 <div align="center">
   
   <!-- Substitua o link abaixo por um GIF do seu jogo rodando -->
-  <img src="https://tenor.com/pt-BR/view/link-toon-link-sprite-tloz-nintendo-gif-16273292733254765206" />
+  <img src="" />
 
   <p>Um mini clone do clássico Zelda, desenvolvido com Java, focado em mecânicas 2D.</p>
 
@@ -45,7 +45,7 @@ Use o teclado para interagir com o ambiente:
 
 ## 📺 Gameplay
 <!-- Coloque um vídeo curto ou mais GIFs -->
-<img src="https://i.imgur.com" width="50%" />
+<img src="" width="50%" />
 
 ---
 <div align="center">
