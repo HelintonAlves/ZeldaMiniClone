@@ -2,6 +2,7 @@ package zeldaminiclone;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferStrategy;
 
 public class Game extends Canvas implements Runnable{
 
@@ -11,6 +12,33 @@ public class Game extends Canvas implements Runnable{
     public Game(){
         this.setPreferredSize(new Dimension(WIDTH,HEIGHT));
     }
+
+    public void tick(){
+
+    }
+
+    public void render(){
+
+        BufferStrategy bs = this.getBufferStrategy();
+        if(bs == null){
+            this.createBufferStrategy(3);
+            return;
+        }
+        Graphics g = bs.getDrawGraphics();
+        //Clean window
+        g.setColor(Color.black);
+        g.fillRect(0, 0, WIDTH, HEIGHT);
+
+        //Render player
+        g.setColor(Color.red);
+        g.fillRect(10, 10, 100, 100);
+
+        bs.show();
+    }
+
+
+
+
 
 
     public static void main(String[] args) {
@@ -31,7 +59,13 @@ public class Game extends Canvas implements Runnable{
     @Override
     public void run() {
         while (true){
-            System.out.println("Chamando game loop");
+            tick();
+            render();
+            try {
+                Thread.sleep(1000/60);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
     }
