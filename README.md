@@ -3,7 +3,7 @@
 <div align="center">
   
   <!-- Substitua o link abaixo por um GIF do seu jogo rodando -->
-  <img src="https://i.gifer.com/Vg7.gif" />
+  <img src="https://i.gifer.com/Vg7.gif" width="20%"/>
 
   <p>Um mini clone do clássico Zelda, desenvolvido com Java, focado em mecânicas 2D.</p>
 
@@ -45,9 +45,9 @@ Use o teclado para interagir com o ambiente:
 
 ## 📺 Gameplay
 <!-- Coloque um vídeo curto ou mais GIFs -->
-<img src="https://i.gifer.com/RWzo.gif" width="50%" />
+<img src="https://i.gifer.com/RWzo.gif" width="20%"/>
 
 ---
 <div align="center">
-  Desenvolvido por [Seu Nome] - © 2025
+  Desenvolvido por Helinton Alves Coelho - © 2025
 </div>
