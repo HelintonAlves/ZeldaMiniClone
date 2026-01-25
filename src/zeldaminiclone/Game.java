@@ -2,19 +2,23 @@ package zeldaminiclone;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
 
-public class Game extends Canvas implements Runnable{
+public class Game extends Canvas implements Runnable, KeyListener {
 
     public static int WIDTH = 480, HEIGHT = 480;
-
+    public Player player;
 
     public Game(){
+        this.addKeyListener(this);
         this.setPreferredSize(new Dimension(WIDTH,HEIGHT));
+        player = new Player(0,0);
     }
 
     public void tick(){
-
+        player.tick();
     }
 
     public void render(){
@@ -30,16 +34,10 @@ public class Game extends Canvas implements Runnable{
         g.fillRect(0, 0, WIDTH, HEIGHT);
 
         //Render player
-        g.setColor(Color.red);
-        g.fillRect(10, 10, 100, 100);
+       player.render(g);
 
         bs.show();
     }
-
-
-
-
-
 
     public static void main(String[] args) {
         Game game = new Game();
@@ -68,5 +66,38 @@ public class Game extends Canvas implements Runnable{
             }
         }
 
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT){
+            player.right = true;
+        } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            player.left = true;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_UP){
+            player.up = true;
+        } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+            player.down = true;
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT){
+            player.right = false;
+        } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            player.left = false;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_UP){
+            player.up = false;
+        } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+            player.down = false;
+        }
     }
 }
