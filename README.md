@@ -45,7 +45,7 @@ Use o teclado para interagir com o ambiente:
 
 ## 📺 Gameplay
 <!-- Coloque um vídeo curto ou mais GIFs -->
-<img src="" width="50%" />
+<img src="https://i.gifer.com/RWzo.gif" width="50%" />
 
 ---
 <div align="center">
