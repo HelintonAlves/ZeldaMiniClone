@@ -45,9 +45,9 @@ Use o teclado para interagir com o ambiente:
 
 ## 📺 Gameplay
 <!-- Coloque um vídeo curto ou mais GIFs -->
-<div align="center">
-  Em construção!
+<div align="center">  
   <img src="https://i.gifer.com/RWzo.gif" width="20%"/>
+  <p>Em construção!
 </div>
 
 
