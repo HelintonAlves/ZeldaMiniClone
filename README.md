@@ -3,7 +3,7 @@
 <div align="center">
   
   <!-- Substitua o link abaixo por um GIF do seu jogo rodando -->
-  <img src="" />
+  <img src="https://i.gifer.com/6mx.gif" />
 
   <p>Um mini clone do clássico Zelda, desenvolvido com Java, focado em mecânicas 2D.</p>
 
