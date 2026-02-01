@@ -12,7 +12,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
     public static int WIDTH = 640, HEIGHT = 480;
     public static int SCALE = 3;
-    public Player player;
+    public static Player player;
     public World world;
     public List<Inimigo> inimigos = new ArrayList<Inimigo>();
 
@@ -22,6 +22,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
         world = new World();
         new SpriteSheet();
         player = new Player(32, 32);
+        inimigos.add(new Inimigo(32,32));
         inimigos.add(new Inimigo(32,32));
     }
 
