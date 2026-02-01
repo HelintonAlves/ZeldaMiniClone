@@ -8,7 +8,8 @@ import java.util.Objects;
 public class SpriteSheet {
 
     public static BufferedImage spritesheet;
-    public static BufferedImage player_sprite;
+    public static BufferedImage[] player_sprite;
+    public static BufferedImage titleWall;
 
     public SpriteSheet()  {
         try {
@@ -16,7 +17,10 @@ public class SpriteSheet {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        player_sprite = SpriteSheet.getSpritesheet(0,11,16,16);
+        player_sprite = new BufferedImage[2];
+        player_sprite[0] = SpriteSheet.getSpritesheet(0,11,16,16);
+        player_sprite[1] = SpriteSheet.getSpritesheet(16,11,16,16);
+        titleWall = SpriteSheet.getSpritesheet(281,240,16,16);
     }
 
     public static BufferedImage getSpritesheet(int x, int y, int width, int height){
