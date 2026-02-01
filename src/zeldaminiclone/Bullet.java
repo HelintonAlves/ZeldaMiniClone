@@ -8,21 +8,20 @@ public class Bullet extends Rectangle {
     public int speed = 8;
     public int frames = 0;
 
-    public Bullet(int x, int y, int dir){
-        super(x+16,y+16,10,10);
+    public Bullet(int x, int y, int dir) {
+        super(x + 16, y + 16, 10, 10);
         this.dir = dir;
     }
 
-    public void tick(){
-        x += speed*dir;
+    public void tick() {
+        x += speed * dir;
         frames++;
-        if (frames == 60){
+        if (frames == 60) {
             Player.bullets.remove(this);
-            return;
         }
     }
 
-    public void render(Graphics g){
+    public void render(Graphics g) {
         g.setColor(Color.yellow);
         g.fillOval(x, y, width, height);
     }
